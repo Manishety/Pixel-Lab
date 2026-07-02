@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Lab - Premium Wall Posters | Elevate Your Space</title>
+  <meta name="description" content="Elevate your space with premium wall posters. Browse our collection of superhero, car, anime, and spiritual posters. Each poster just ₹300.">
+  <meta property="og:title" content="Pixel Lab - Premium Wall Posters">
+  <meta property="og:description" content="Elevate your space with premium wall posters. Each poster just ₹300.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* === DESIGN SYSTEM === */
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-tertiary: #1a1a1a;
+      --bg-card: #141414;
+      --bg-card-hover: #1c1c1c;
+      --bg-glass: rgba(255,255,255,0.04);
+      --bg-glass-hover: rgba(255,255,255,0.08);
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255,255,255,0.7);
+      --text-muted: rgba(255,255,255,0.4);
+      --text-accent: #ff4d4d;
+      --accent-primary: #ff4d4d;
+      --accent-secondary: #ff6b35;
+      --accent-gradient: linear-gradient(135deg,#ff4d4d 0%,#ff6b35 100%);
+      --accent-glow: rgba(255,77,77,0.3);
+      --border-subtle: rgba(255,255,255,0.06);
+      --border-light: rgba(255,255,255,0.1);
+      --border-accent: rgba(255,77,77,0.3);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.4);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
+      --shadow-glow: 0 0 30px rgba(255,77,77,0.15);
+      --whatsapp-green: #25D366;
+      --font-display: 'Outfit',sans-serif;
+      --font-body: 'Inter',sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 100px;
+      --ease-out: cubic-bezier(0.16,1,0.3,1);
+      --ease-bounce: cubic-bezier(0.34,1.56,0.64,1);
+      --duration-fast: 200ms;
+      --duration-normal: 350ms;
+      --duration-slow: 500ms;
+    }
+
+    /* === RESET === */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{font-family:var(--font-body);background-color:var(--bg-primary);color:var(--text-secondary);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{background:none;border:none;cursor:pointer;font-family:inherit;color:inherit}
+    img{max-width:100%;display:block}
+    ul{list-style:none}
+
+    /* === ANNOUNCEMENT BAR === */
+    .announcement-bar{background:var(--bg-secondary);border-bottom:1px solid var(--border-subtle);overflow:hidden;padding:10px 0;position:relative}
+    .announcement-track{display:flex;gap:60px;animation:marquee 25s linear infinite;white-space:nowrap;width:max-content}
+    .announcement-item{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--text-secondary);letter-spacing:.5px;text-transform:uppercase;flex-shrink:0}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* === HEADER === */
+    .header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-subtle);transition:all var(--duration-normal) var(--ease-out)}
+    .header.scrolled{background:rgba(10,10,10,0.95)}
+    .nav{max-width:1400px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-primary);letter-spacing:2px;display:flex;align-items:center;gap:8px;transition:opacity var(--duration-fast)}
+    .logo:hover{opacity:.8}
+    .logo-icon{color:var(--accent-primary);font-size:14px}
+    .nav-links{display:flex;gap:32px}
+    .nav-link{font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--text-secondary);position:relative;padding:4px 0;transition:color var(--duration-fast);letter-spacing:.3px}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent-gradient);border-radius:2px;transition:width var(--duration-normal) var(--ease-out)}
+    .nav-link:hover,.nav-link.active{color:var(--text-primary)}
+    .nav-link.active::after,.nav-link:hover::after{width:100%}
+    .nav-actions{display:flex;align-items:center;gap:16px}
+    .search-btn,.cart-btn{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--text-secondary);transition:all var(--duration-fast);position:relative;background:var(--bg-glass)}
+    .search-btn:hover,.cart-btn:hover{background:var(--bg-glass-hover);color:var(--text-primary);transform:scale(1.05)}
+    .cart-count{position:absolute;top:-2px;right:-2px;width:20px;height:20px;background:var(--accent-gradient);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:transform var(--duration-fast) var(--ease-bounce)}
+    .cart-count.bump{animation:cartBump 400ms var(--ease-bounce)}
+    @keyframes cartBump{0%,100%{transform:scale(1)}50%{transform:scale(1.4)}}
+
+    /* === MOBILE MENU === */
+    .mobile-menu-btn{display:none;flex-direction:column;gap:5px;width:24px;padding:4px 0}
+    .mobile-menu-btn span{height:2px;background:var(--text-primary);border-radius:2px;transition:all var(--duration-normal) var(--ease-out)}
+    .mobile-menu-btn span:nth-child(1){width:100%}.mobile-menu-btn span:nth-child(2){width:70%}.mobile-menu-btn span:nth-child(3){width:50%}
+    .mobile-menu-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:all var(--duration-normal)}
+    .mobile-menu-overlay.active{opacity:1;visibility:visible}
+    .mobile-menu-content{position:absolute;top:0;left:0;width:300px;height:100%;background:var(--bg-secondary);padding:48px 24px;transform:translateX(-100%);transition:transform var(--duration-slow) var(--ease-out)}
+    .mobile-menu-overlay.active .mobile-menu-content{transform:translateX(0)}
+    .mobile-close-btn{position:absolute;top:24px;right:24px;color:var(--text-muted);transition:color var(--duration-fast)}
+    .mobile-close-btn:hover{color:var(--text-primary)}
+    .mobile-nav-links{margin-top:64px;display:flex;flex-direction:column;gap:8px}
+    .mobile-nav-link{font-family:var(--font-display);font-size:18px;font-weight:500;color:var(--text-secondary);padding:16px 0;border-bottom:1px solid var(--border-subtle);transition:all var(--duration-fast)}
+    .mobile-nav-link:hover,.mobile-nav-link.active{color:var(--text-primary);padding-left:16px}
+    .mobile-menu-footer{position:absolute;bottom:48px;left:24px;right:24px}
+    .whatsapp-link-mobile{display:flex;align-items:center;gap:8px;color:var(--whatsapp-green);font-weight:600;font-size:15px}
+
+    /* === SEARCH === */
+    .search-overlay{position:fixed;top:0;left:0;width:100%;z-index:150;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:24px;transform:translateY(-100%);opacity:0;transition:all var(--duration-normal) var(--ease-out)}
+    .search-overlay.active{transform:translateY(0);opacity:1}
+    .search-container{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:16px}
+    .search-input{flex:1;background:var(--bg-glass);border:1px solid var(--border-light);border-radius:var(--radius-full);padding:14px 24px;font-size:16px;color:var(--text-primary);font-family:var(--font-body);outline:none;transition:border-color var(--duration-fast)}
+    .search-input::placeholder{color:var(--text-muted)}
+    .search-input:focus{border-color:var(--accent-primary)}
+    .search-close{color:var(--text-muted);transition:color var(--duration-fast)}
+    .search-close:hover{color:var(--text-primary)}
+
+    /* === BUTTONS === */
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius-full);transition:all var(--duration-normal) var(--ease-out);letter-spacing:.3px;cursor:pointer;border:none}
+    .btn-primary{background:var(--accent-gradient);color:#fff;box-shadow:0 4px 20px var(--accent-glow)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
+    .btn-outline{background:transparent;color:var(--text-primary);border:1px solid var(--border-light)}
+    .btn-outline:hover{background:var(--bg-glass-hover);border-color:var(--text-muted);transform:translateY(-2px)}
+    .btn-full{width:100%;justify-content:center}
+    .btn-glow{animation:btnGlow 2s ease-in-out infinite alternate}
+    @keyframes btnGlow{from{box-shadow:0 4px 20px var(--accent-glow)}to{box-shadow:0 4px 40px rgba(255,77,77,0.4)}}
+
+    /* === HERO === */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:96px 24px;max-width:1400px;margin:0 auto;gap:64px;overflow:hidden}
+    .hero-bg-animation{position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background:radial-gradient(ellipse at 20% 50%,rgba(255,77,77,0.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(255,107,53,0.05) 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(100,50,200,0.04) 0%,transparent 50%)}
+    .hero-content{flex:1;z-index:1}
+    .hero-badge{display:inline-block;font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--accent-primary);background:rgba(255,77,77,0.1);border:1px solid rgba(255,77,77,0.2);padding:6px 16px;border-radius:var(--radius-full);margin-bottom:24px;letter-spacing:1px;text-transform:uppercase;animation:fadeInUp .6s var(--ease-out) both}
+    .hero-title{font-family:var(--font-display);font-weight:900;line-height:1.05;margin-bottom:24px}
+    .hero-title-line{display:block;font-size:clamp(40px,7vw,72px);color:var(--text-primary);animation:fadeInUp .6s var(--ease-out) .1s both}
+    .hero-title-accent{background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeInUp .6s var(--ease-out) .2s both}
+    .hero-subtitle{font-size:17px;color:var(--text-secondary);max-width:480px;line-height:1.7;margin-bottom:32px;animation:fadeInUp .6s var(--ease-out) .3s both}
+    .hero-subtitle strong{color:var(--accent-primary);font-weight:700}
+    .hero-actions{display:flex;gap:16px;margin-bottom:48px;animation:fadeInUp .6s var(--ease-out) .4s both}
+    .hero-stats{display:flex;align-items:center;gap:32px;animation:fadeInUp .6s var(--ease-out) .5s both}
+    .hero-stat{display:flex;flex-direction:column}
+    .hero-stat-number{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--text-primary)}
+    .hero-stat-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+    .hero-stat-divider{width:1px;height:40px;background:var(--border-light)}
+    .hero-visual{flex:1;display:flex;justify-content:center;align-items:center;position:relative;animation:fadeInRight .8s var(--ease-out) .3s both}
+    .hero-poster-stack{position:relative;width:320px;height:450px}
+    .hero-poster{position:absolute;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);transition:transform var(--duration-slow) var(--ease-out)}
+    .hero-poster img{width:100%;height:100%;object-fit:cover}
+    .hero-poster-1{width:220px;height:320px;top:60px;left:50px;z-index:3;transform:rotate(-3deg)}
+    .hero-poster-2{width:200px;height:280px;top:20px;right:10px;z-index:2;transform:rotate(5deg)}
+    .hero-poster-3{width:180px;height:260px;bottom:0;left:0;z-index:1;transform:rotate(-8deg)}
+    .hero-poster-stack:hover .hero-poster-1{transform:rotate(-3deg) translateY(-10px) scale(1.03)}
+    .hero-poster-stack:hover .hero-poster-2{transform:rotate(5deg) translateX(10px) scale(1.03)}
+    .hero-poster-stack:hover .hero-poster-3{transform:rotate(-8deg) translate(-10px,10px) scale(1.03)}
+
+    /* === SECTIONS === */
+    .section-container{max-width:1400px;margin:0 auto;padding:96px 24px}
+    .section-header{text-align:center;margin-bottom:48px}
+    .section-badge{display:inline-block;font-family:var(--font-display);font-size:12px;font-weight:600;color:var(--accent-primary);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+    .section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--text-primary);margin-bottom:24px}
+
+    /* === CATEGORIES === */
+    .categories-section{background:var(--bg-secondary)}
+    .categories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .category-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;height:280px;cursor:pointer;transition:transform var(--duration-normal) var(--ease-out)}
+    .category-card-wide{grid-column:span 3;height:220px}
+    .category-card:hover{transform:scale(1.02)}
+    .category-card-bg{position:absolute;inset:0}
+    .category-card-bg img{width:100%;height:100%;object-fit:cover;transition:transform var(--duration-slow) var(--ease-out)}
+    .category-card:hover .category-card-bg img{transform:scale(1.08)}
+    .category-card-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.1) 100%)}
+    .category-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:1}
+    .category-card-content h3{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
+    .category-card-content p{font-size:13px;color:var(--text-secondary)}
+    .category-card-arrow{position:absolute;top:24px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--bg-glass);backdrop-filter:blur(10px);border-radius:50%;color:#fff;font-size:18px;opacity:0;transform:translateX(-10px);transition:all var(--duration-normal) var(--ease-out)}
+    .category-card:hover .category-card-arrow{opacity:1;transform:translateX(0)}
+
+    /* === FILTER TABS === */
+    .filter-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .filter-tab{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--text-muted);padding:8px 20px;border-radius:var(--radius-full);border:1px solid var(--border-subtle);transition:all var(--duration-fast);letter-spacing:.3px}
+    .filter-tab:hover{color:var(--text-secondary);border-color:var(--border-light);background:var(--bg-glass)}
+    .filter-tab.active{color:#fff;background:var(--accent-gradient);border-color:transparent;box-shadow:0 4px 15px var(--accent-glow)}
+
+    /* === PRODUCTS === */
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+    .product-card{background:var(--bg-card);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-subtle);transition:all var(--duration-normal) var(--ease-out);cursor:pointer;position:relative}
+    .product-card:hover{transform:translateY(-8px);border-color:var(--border-light);box-shadow:var(--shadow-lg)}
+    .product-card-image{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--bg-tertiary)}
+    .product-card-image img{width:100%;height:100%;object-fit:cover;transition:transform var(--duration-slow) var(--ease-out)}
+    .product-card:hover .product-card-image img{transform:scale(1.06)}
+    .product-card-badge{position:absolute;top:16px;left:16px;background:var(--accent-gradient);color:#fff;font-family:var(--font-display);font-size:11px;font-weight:700;padding:4px 12px;border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:.5px}
+    .product-card-quick-view{position:absolute;bottom:16px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);color:#fff;font-family:var(--font-display);font-size:12px;font-weight:600;padding:10px 24px;border-radius:var(--radius-full);border:1px solid var(--border-light);transition:all var(--duration-normal) var(--ease-out);white-space:nowrap;letter-spacing:.5px}
+    .product-card:hover .product-card-quick-view{opacity:1;transform:translateX(-50%) translateY(0)}
+    .product-card-info{padding:16px 16px 24px}
+    .product-card-category{font-size:11px;color:var(--accent-primary);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px}
+    .product-card-title{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--text-primary);margin-bottom:8px;line-height:1.3}
+    .product-card-price-row{display:flex;align-items:center;gap:8px}
+    .product-card-price{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text-primary)}
+    .product-card-original-price{font-size:13px;color:var(--text-muted);text-decoration:line-through}
+    .product-card-add-btn{position:absolute;bottom:16px;right:16px;width:36px;height:36px;background:var(--accent-gradient);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all var(--duration-fast) var(--ease-bounce);box-shadow:0 4px 15px var(--accent-glow);z-index:2}
+    .product-card-add-btn:hover{transform:scale(1.15)}
+    .product-card-add-btn svg{width:16px;height:16px}
+    .product-card.hidden{display:none}
+    .product-card.fade-in{animation:productFadeIn .4s var(--ease-out) both}
+    @keyframes productFadeIn{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+    /* === FEATURES === */
+    .features-section{background:var(--bg-secondary)}
+    .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .feature-card{background:var(--bg-glass);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:32px;text-align:center;transition:all var(--duration-normal) var(--ease-out)}
+    .feature-card:hover{transform:translateY(-6px);border-color:var(--border-accent);background:var(--bg-glass-hover);box-shadow:var(--shadow-glow)}
+    .feature-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:rgba(255,77,77,0.1);border-radius:var(--radius-md);margin:0 auto 16px;color:var(--accent-primary);transition:transform var(--duration-normal) var(--ease-bounce)}
+    .feature-card:hover .feature-icon{transform:scale(1.1)}
+    .feature-card h3{font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--text-primary);margin-bottom:8px}
+    .feature-card p{font-size:13px;color:var(--text-muted);line-height:1.6}
+
+    /* === OFFERS BANNER === */
+    .offers-banner{background:var(--bg-primary);position:relative;overflow:hidden}
+    .offers-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(255,77,77,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(255,107,53,0.08) 0%,transparent 60%)}
+    .offers-content{max-width:1400px;margin:0 auto;padding:96px 24px;display:flex;align-items:center;justify-content:space-between;position:relative}
+    .offers-text{max-width:560px}
+    .offers-badge{display:inline-block;font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--accent-primary);margin-bottom:16px;letter-spacing:.5px}
+    .offers-text h2{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--text-primary);line-height:1.15;margin-bottom:16px}
+    .offers-text p{font-size:16px;color:var(--text-secondary);margin-bottom:32px;line-height:1.7}
+    .offer-tag{font-family:var(--font-display);font-size:64px;font-weight:900;color:var(--text-primary);background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .offer-tag span{font-size:24px;font-weight:600}
+
+    /* === CART DRAWER === */
+    .cart-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.6);opacity:0;visibility:hidden;transition:all var(--duration-normal)}
+    .cart-overlay.active{opacity:1;visibility:visible}
+    .cart-drawer{position:fixed;top:0;right:0;width:400px;max-width:90vw;height:100vh;z-index:301;background:var(--bg-secondary);border-left:1px solid var(--border-subtle);display:flex;flex-direction:column;transform:translateX(100%);transition:transform var(--duration-slow) var(--ease-out)}
+    .cart-drawer.active{transform:translateX(0)}
+    .cart-drawer-header{display:flex;align-items:center;justify-content:space-between;padding:24px;border-bottom:1px solid var(--border-subtle)}
+    .cart-drawer-header h3{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--text-primary)}
+    .cart-close-btn{color:var(--text-muted);transition:color var(--duration-fast)}
+    .cart-close-btn:hover{color:var(--text-primary)}
+    .cart-items{flex:1;overflow-y:auto;padding:16px}
+    .cart-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--text-muted);text-align:center;gap:8px}
+    .cart-empty p{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--text-secondary);margin-top:16px}
+    .cart-empty span{font-size:13px}
+    .cart-item{display:flex;gap:16px;padding:16px;background:var(--bg-glass);border-radius:var(--radius-md);border:1px solid var(--border-subtle);margin-bottom:8px;animation:slideIn .3s var(--ease-out)}
+    @keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+    .cart-item-image{width:70px;height:90px;border-radius:var(--radius-sm);overflow:hidden;flex-shrink:0}
+    .cart-item-image img{width:100%;height:100%;object-fit:cover}
+    .cart-item-details{flex:1;display:flex;flex-direction:column;justify-content:center}
+    .cart-item-title{font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:4px}
+    .cart-item-price{font-size:15px;font-weight:700;color:var(--accent-primary)}
+    .cart-item-qty{font-size:12px;color:var(--text-muted);margin-top:2px}
+    .cart-item-remove{align-self:flex-start;color:var(--text-muted);font-size:18px;transition:color var(--duration-fast);padding:4px}
+    .cart-item-remove:hover{color:var(--accent-primary)}
+    .cart-footer{padding:24px;border-top:1px solid var(--border-subtle)}
+    .cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .cart-total span:first-child{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--text-secondary)}
+    .cart-total span:last-child{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--text-primary)}
+    .cart-note{font-size:12px;color:var(--text-muted);text-align:center;margin-top:8px}
+
+    /* === PRODUCT MODAL === */
+    .modal-overlay{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,0.75);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:all var(--duration-normal)}
+    .modal-overlay.active{opacity:1;visibility:visible}
+    .product-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:401;background:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);width:90%;max-width:860px;max-height:90vh;overflow:auto;opacity:0;visibility:hidden;transition:all var(--duration-normal) var(--ease-out)}
+    .product-modal.active{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+    .modal-close{position:absolute;top:16px;right:16px;z-index:10;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--bg-glass);backdrop-filter:blur(10px);border-radius:50%;color:var(--text-secondary);transition:all var(--duration-fast)}
+    .modal-close:hover{background:var(--bg-glass-hover);color:var(--text-primary)}
+    .modal-content{display:flex}
+    .modal-image{flex:1;max-height:600px;overflow:hidden;border-radius:var(--radius-xl) 0 0 var(--radius-xl)}
+    .modal-image img{width:100%;height:100%;object-fit:cover}
+    .modal-details{flex:1;padding:48px;display:flex;flex-direction:column;justify-content:center}
+    .modal-category{font-size:12px;color:var(--accent-primary);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:8px}
+    .modal-title{font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--text-primary);margin-bottom:16px;line-height:1.2}
+    .modal-description{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:24px}
+    .modal-price-row{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .modal-price{font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--text-primary)}
+    .modal-original-price{font-size:16px;color:var(--text-muted);text-decoration:line-through}
+    .modal-discount{background:rgba(255,77,77,0.15);color:var(--accent-primary);font-size:12px;font-weight:700;padding:4px 10px;border-radius:var(--radius-full)}
+    .modal-info{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;padding:16px;background:var(--bg-glass);border-radius:var(--radius-md)}
+    .modal-info-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary)}
+    .modal-info-item svg{color:var(--accent-primary);flex-shrink:0}
+    .modal-qty{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .modal-qty label{font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--text-secondary)}
+    .qty-selector{display:flex;align-items:center;gap:16px;background:var(--bg-glass);border-radius:var(--radius-full);padding:4px}
+    .qty-btn{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:18px;color:var(--text-secondary);transition:all var(--duration-fast)}
+    .qty-btn:hover{background:var(--bg-glass-hover);color:var(--text-primary)}
+    .qty-value{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--text-primary);min-width:24px;text-align:center}
+    .modal-add-btn{font-size:15px;padding:16px 24px}
+
+    /* === TOAST === */
+    .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);z-index:500;background:var(--bg-tertiary);border:1px solid var(--border-light);color:var(--text-primary);padding:14px 24px;border-radius:var(--radius-full);display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:14px;font-weight:500;box-shadow:var(--shadow-lg);opacity:0;transition:all var(--duration-normal) var(--ease-out)}
+    .toast svg{color:#4ade80}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    /* === FOOTER === */
+    .footer{background:var(--bg-secondary);border-top:1px solid var(--border-subtle)}
+    .footer-content{max-width:1400px;margin:0 auto;padding:64px 24px 48px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
+    .footer-logo{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--text-primary);letter-spacing:2px;display:inline-flex;align-items:center;gap:8px;margin-bottom:16px}
+    .footer-brand p{font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:24px;max-width:320px}
+    .footer-social{display:flex;gap:8px}
+    .social-link{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--bg-glass);border:1px solid var(--border-subtle);color:var(--text-secondary);transition:all var(--duration-fast)}
+    .social-link:hover{background:var(--bg-glass-hover);color:var(--text-primary);border-color:var(--border-light);transform:translateY(-2px)}
+    .footer-links-group h4{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:24px;text-transform:uppercase;letter-spacing:1px}
+    .footer-links-group ul{display:flex;flex-direction:column;gap:8px}
+    .footer-links-group a{font-size:14px;color:var(--text-muted);transition:all var(--duration-fast);padding:4px 0}
+    .footer-links-group a:hover{color:var(--text-primary);padding-left:6px}
+    .footer-bottom{border-top:1px solid var(--border-subtle);padding:24px;text-align:center}
+    .footer-bottom p{font-size:13px;color:var(--text-muted)}
+
+    /* === WHATSAPP FLOAT === */
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:90;width:56px;height:56px;background:var(--whatsapp-green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all var(--duration-normal) var(--ease-bounce);animation:whatsappPulse 2s ease-in-out infinite}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,0.5)}
+    @keyframes whatsappPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.6),0 0 0 10px rgba(37,211,102,0.1)}}
+
+    /* === ANIMATIONS === */
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+    .reveal{opacity:0;transform:translateY(30px);transition:all .7s var(--ease-out)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* === RESPONSIVE === */
+    @media(max-width:1024px){
+      .features-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-content{grid-template-columns:1fr 1fr;gap:32px}
+      .hero{flex-direction:column;text-align:center;padding-top:64px;min-height:auto}
+      .hero-content{order:2}.hero-visual{order:1}
+      .hero-subtitle{margin-left:auto;margin-right:auto}
+      .hero-actions{justify-content:center}
+      .hero-stats{justify-content:center}
+      .hero-poster-stack{width:280px;height:380px}
+      .hero-poster-1{width:180px;height:260px;top:50px;left:50px}
+      .hero-poster-2{width:160px;height:230px;top:10px;right:10px}
+      .hero-poster-3{width:150px;height:220px}
+      .modal-content{flex-direction:column}
+      .modal-image{max-height:300px;border-radius:var(--radius-xl) var(--radius-xl) 0 0}
+      .categories-grid{grid-template-columns:1fr 1fr}
+      .category-card-wide{grid-column:span 2}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .mobile-menu-btn{display:flex}
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+      .features-grid{grid-template-columns:1fr}
+      .footer-content{grid-template-columns:1fr}
+      .offers-content{flex-direction:column;text-align:center}
+      .categories-grid{grid-template-columns:1fr}
+      .category-card-wide{grid-column:span 1}
+      .hero-poster-stack{width:240px;height:340px}
+      .hero-poster-1{width:160px;height:230px;top:40px;left:40px}
+      .hero-poster-2{width:140px;height:200px;top:10px;right:5px}
+      .hero-poster-3{width:130px;height:190px;left:-5px}
+      .hero-actions{flex-direction:column;align-items:center}
+      .hero-stats{flex-wrap:wrap;gap:16px}
+      .hero-stat-divider{display:none}
+      .modal-details{padding:24px}
+      .modal-title{font-size:22px}
+    }
+    @media(max-width:480px){
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+      .product-card-info{padding:8px 8px 16px}
+      .product-card-title{font-size:13px}
+      .product-card-price{font-size:15px}
+      .product-card-add-btn{width:30px;height:30px;bottom:8px;right:8px}
+      .section-container{padding:64px 16px}
+      .nav{padding:0 16px}
+      .hero{padding:48px 16px}
+    }
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--bg-primary)}
+    ::-webkit-scrollbar-thumb{background:var(--border-light);border-radius:3px}
+    ::-webkit-scrollbar-thumb:hover{background:var(--text-muted)}
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="logo" id="logo">
+        <span class="logo-icon">◆</span>PIXEL LAB
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" class="nav-link active" data-filter="all">All</a></li>
+        <li><a href="#" class="nav-link" data-filter="superheroes">Superheroes</a></li>
+        <li><a href="#" class="nav-link" data-filter="cars">Cars</a></li>
+        <li><a href="#" class="nav-link" data-filter="spiritual">Spiritual</a></li>
+        <li><a href="#" class="nav-link" data-filter="combo">Combo Packs</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="cart-btn" id="cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-container">
+      <input type="text" class="search-input" id="search-input" placeholder="Search posters..." autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="Close search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <div class="mobile-menu-content">
+      <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="#" class="mobile-nav-link active" data-filter="all">All Posters</a></li>
+        <li><a href="#" class="mobile-nav-link" data-filter="superheroes">Superheroes</a></li>
+        <li><a href="#" class="mobile-nav-link" data-filter="cars">Cars</a></li>
+        <li><a href="#" class="mobile-nav-link" data-filter="spiritual">Spiritual</a></li>
+        <li><a href="#" class="mobile-nav-link" data-filter="combo">Combo Packs</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="https://wa.me/919999999999" class="whatsapp-link-mobile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat with us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-animation"></div>
+      <div class="hero-content">
+        <div class="hero-badge">✨ Premium Collection</div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Elevate Your</span>
+          <span class="hero-title-line hero-title-accent">Space</span>
+        </h1>
+        <p class="hero-subtitle">Transform your walls into captivating canvases with our premium collection of designer posters. Each poster meticulously crafted at just <strong>₹300</strong>.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary" id="hero-shop-btn">
+            Shop Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#categories" class="btn btn-outline" id="hero-browse-btn">Browse Categories</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">500+</span>
+            <span class="hero-stat-label">Happy Customers</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">₹300</span>
+            <span class="hero-stat-label">Per Poster</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">100%</span>
+            <span class="hero-stat-label">Secure Packaging</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-poster-stack">
+          <div class="hero-poster hero-poster-1"><img src="images/posters/batman-brave.jpg" alt="Batman Poster" loading="eager"></div>
+          <div class="hero-poster hero-poster-2"><img src="images/posters/spiderman.jpg" alt="Spider-Man Poster" loading="eager"></div>
+          <div class="hero-poster hero-poster-3"><img src="images/posters/mustang.jpg" alt="Mustang Poster" loading="eager"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Collections</span>
+          <h2 class="section-title">Shop by Category</h2>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card" data-category="superheroes" id="cat-superheroes">
+            <div class="category-card-bg"><img src="images/posters/spiderman.jpg" alt="Superheroes Collection" loading="lazy"></div>
+            <div class="category-card-content"><h3>Superheroes</h3><p>Batman, Spider-Man & more</p><span class="category-card-arrow">→</span></div>
+          </div>
+          <div class="category-card" data-category="cars" id="cat-cars">
+            <div class="category-card-bg"><img src="images/posters/mustang.jpg" alt="Cars Collection" loading="lazy"></div>
+            <div class="category-card-content"><h3>Cars</h3><p>Mustang, Porsche & more</p><span class="category-card-arrow">→</span></div>
+          </div>
+          <div class="category-card" data-category="spiritual" id="cat-spiritual">
+            <div class="category-card-bg"><img src="images/posters/radha-krishna.jpg" alt="Spiritual Collection" loading="lazy"></div>
+            <div class="category-card-content"><h3>Spiritual</h3><p>Divine art & sacred beauty</p><span class="category-card-arrow">→</span></div>
+          </div>
+          <div class="category-card category-card-wide" data-category="combo" id="cat-combo">
+            <div class="category-card-bg"><img src="images/posters/car-poster-kit.jpg" alt="Combo Packs" loading="lazy"></div>
+            <div class="category-card-content"><h3>Combo Packs</h3><p>Wall setup kits with multiple posters</p><span class="category-card-arrow">→</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Our Collection</span>
+          <h2 class="section-title">All Posters</h2>
+          <div class="filter-tabs" id="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="superheroes">Superheroes</button>
+            <button class="filter-tab" data-filter="cars">Cars</button>
+            <button class="filter-tab" data-filter="spiritual">Spiritual</button>
+            <button class="filter-tab" data-filter="combo">Combo Packs</button>
+          </div>
+        </div>
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Why Us</span>
+          <h2 class="section-title">Why Choose Posterized?</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" id="feature-quality">
+            <div class="feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <h3>Premium Quality</h3>
+            <p>Printed on 300 GSM matte finish art paper for vivid colors and durability.</p>
+          </div>
+          <div class="feature-card" id="feature-delivery">
+            <div class="feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <h3>Fast Shipping</h3>
+            <p>Reliable and fast shipping across India. Secure packaging to prevent damage.</p>
+          </div>
+          <div class="feature-card" id="feature-price">
+            <div class="feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Best Price</h3>
+            <p>Every poster at just ₹300. Combo offers available for bulk orders.</p>
+          </div>
+          <div class="feature-card" id="feature-support">
+            <div class="feature-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>WhatsApp Support</h3>
+            <p>Quick support and custom order requests via WhatsApp. We're here to help!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers Banner -->
+    <section class="offers-banner" id="offers-banner">
+      <div class="offers-content">
+        <div class="offers-text">
+          <span class="offers-badge">🔥 Limited Offer</span>
+          <h2>Buy 4 Posters, Get 1 FREE!</h2>
+          <p>Elevate your entire room setup with our amazing combo deals. Premium posters at unbeatable prices.</p>
+          <a href="#products" class="btn btn-primary btn-glow" id="offers-shop-btn">
+            Grab The Deal
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="offers-visual">
+          <div class="offer-tag">₹300<span>/each</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Your cart is empty</p>
+        <span>Add some amazing posters!</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-amount">₹0</span>
+      </div>
+      <a href="#" class="btn btn-primary btn-full" id="checkout-whatsapp-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order via WhatsApp
+      </a>
+      <p class="cart-note">We'll confirm your order on WhatsApp!</p>
+    </div>
+  </div>
+
+  <!-- Product Quick View Modal -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="product-modal" id="product-modal">
+    <button class="modal-close" id="modal-close" aria-label="Close modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="modal-content">
+      <div class="modal-image"><img id="modal-img" src="" alt=""></div>
+      <div class="modal-details">
+        <span class="modal-category" id="modal-category"></span>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="modal-price-row">
+          <span class="modal-price" id="modal-price">₹300</span>
+          <span class="modal-original-price">₹499</span>
+          <span class="modal-discount">40% OFF</span>
+        </div>
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+            <span>A4 Size (210 × 297mm)</span>
+          </div>
+          <div class="modal-info-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+            <span>300 GSM Matte Paper</span>
+          </div>
+          <div class="modal-info-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <span>Fast Shipping (Prepaid)</span>
+          </div>
+        </div>
+        <div class="modal-qty">
+          <label>Quantity:</label>
+          <div class="qty-selector">
+            <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="qty-value" id="qty-value">1</span>
+            <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-full modal-add-btn" id="modal-add-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Add to Cart — ₹300
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Added to cart!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo"><span class="logo-icon">◆</span> PIXEL LAB</a>
+        <p>Elevate your space with personalized artistry. Premium designer posters crafted to reflect your unique style.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/919999999999" class="social-link" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">All Posters</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#features">Why Us</a></li>
+          <li><a href="#offers-banner">Offers</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" data-filter="superheroes">Superheroes</a></li>
+          <li><a href="#" data-filter="cars">Cars</a></li>
+          <li><a href="#" data-filter="spiritual">Spiritual</a></li>
+          <li><a href="#" data-filter="combo">Combo Packs</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://wa.me/919999999999">WhatsApp Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Pixel Lab. All rights reserved. Made with ❤️ in India.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919999999999?text=Hi!%20I'm%20interested%20in%20your%20posters." class="whatsapp-float" id="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // === PRODUCT DATA ===
+    const products = [
+      { id:1, title:"Batman — Men Are Brave", category:"superheroes", categoryLabel:"Superheroes", price:300, originalPrice:499, image:"images/posters/batman-brave.jpg", badge:"Trending", description:"A powerful Batman silhouette poster with the bold 'Men Are Brave' typography. Deep red tones create a dramatic, cinematic feel perfect for any superhero fan's wall." },
+      { id:2, title:"Spider-Man — Peter Parker", category:"superheroes", categoryLabel:"Superheroes", price:300, originalPrice:499, image:"images/posters/spiderman.jpg", badge:"Popular", description:"A stunning Spider-Man magazine-style poster featuring Peter Parker in his iconic suit. 'With Great Power Comes Great Responsibility' — a must-have for every Marvel fan." },
+      { id:3, title:"Ford Mustang Classic", category:"cars", categoryLabel:"Cars", price:300, originalPrice:499, image:"images/posters/mustang.jpg", badge:"Hot", description:"Celebrate the legendary Ford Mustang with this beautifully illustrated poster. The classic black Mustang on a golden background radiates vintage muscle car energy." },
+      { id:4, title:"Car Poster Wall Kit — 26 Designs", category:"combo", categoryLabel:"Combo Pack", price:300, originalPrice:549, image:"images/posters/car-poster-kit.jpg", badge:"Best Value", description:"The ultimate car lover's room setup! 26 A4-size premium car posters featuring Mustang, Porsche, BMW, Bugatti, Ferrari, and more. Transform your entire wall." },
+      { id:5, title:"Radha Krishna — Divine Love", category:"spiritual", categoryLabel:"Spiritual", price:300, originalPrice:499, image:"images/posters/radha-krishna.jpg", badge:"New", description:"A breathtaking artistic rendition of Radha Krishna, showcasing divine love in intricate detail. Delicate floral motifs and celestial colors bring peace and beauty to any space." },
+      { id:6, title:"Krishna — The Flute Player", category:"spiritual", categoryLabel:"Spiritual", price:300, originalPrice:499, image:"images/posters/krishna-flute.jpg", badge:"New", description:"A mesmerizing blue-toned artwork of Lord Krishna playing his divine flute. Intricate line-art details with vibrant color accents create a stunning piece of sacred art." },
+      { id:7, title:"Spider-Man & Gwen — Abstract Art", category:"superheroes", categoryLabel:"Superheroes", price:300, originalPrice:499, image:"images/posters/spiderman-gwen.jpg", badge:"Limited", description:"A stunning abstract art poster featuring Spider-Man and Gwen Stacy in a bold, geometric collage style. Vivid reds and warm tones make this a unique collector's piece." },
+      { id:8, title:"Porsche × Spider-Man Edition", category:"cars", categoryLabel:"Cars", price:300, originalPrice:499, image:"images/posters/porsche-spiderman.jpg", badge:"Exclusive", description:"Where superheroes meet supercars — a bold Porsche poster with Spider-Man inspired design. Deep red and black tones with web-pattern details create an electrifying mashup." },
+      { id:9, title:"Porsche 911 — Classic Blueprint", category:"cars", categoryLabel:"Cars", price:300, originalPrice:499, image:"images/posters/porsche-911.jpg", badge:"Popular", description:"A beautifully designed Porsche 911 poster in vintage blueprint style. Featuring the iconic side profile with detail shots, this is a must-have for every Porsche enthusiast." },
+      { id:10, title:"BMW E30 M3 — Legend", category:"cars", categoryLabel:"Cars", price:300, originalPrice:499, image:"images/posters/bmw-e30.jpg", badge:"Hot", description:"The legendary BMW E30 M3 in stunning red, captured in a dramatic garage setting. Bold typography and cinematic lighting make this poster a true automotive icon." }
+    ];
+
+    let cart = [];
+    let currentModalProduct = null;
+    let modalQty = 1;
+
+    const $ = s => document.querySelector(s);
+    const $$ = s => document.querySelectorAll(s);
+
+    const productsGrid=$('#products-grid'),cartBtn=$('#cart-btn'),cartCount=$('#cart-count'),cartOverlay=$('#cart-overlay'),cartDrawer=$('#cart-drawer'),cartCloseBtn=$('#cart-close-btn'),cartItems=$('#cart-items'),cartEmpty=$('#cart-empty'),cartFooter=$('#cart-footer'),cartTotalAmount=$('#cart-total-amount'),checkoutWhatsappBtn=$('#checkout-whatsapp-btn');
+    const modalOverlay=$('#modal-overlay'),productModal=$('#product-modal'),modalClose=$('#modal-close'),modalImg=$('#modal-img'),modalTitle=$('#modal-title'),modalCategory=$('#modal-category'),modalDescription=$('#modal-description'),modalPrice=$('#modal-price'),modalAddBtn=$('#modal-add-btn'),qtyMinus=$('#qty-minus'),qtyPlus=$('#qty-plus'),qtyValue=$('#qty-value');
+    const searchBtn=$('#search-btn'),searchOverlay=$('#search-overlay'),searchInput=$('#search-input'),searchClose=$('#search-close');
+    const mobileMenuBtn=$('#mobile-menu-btn'),mobileMenuOverlay=$('#mobile-menu-overlay'),mobileCloseBtn=$('#mobile-close-btn');
+    const toast=$('#toast'),toastMessage=$('#toast-message');
+
+    // === RENDER PRODUCTS ===
+    function renderProducts(filter='all'){
+      productsGrid.innerHTML='';
+      const filtered=filter==='all'?products:products.filter(p=>p.category===filter);
+      filtered.forEach((product,index)=>{
+        const card=document.createElement('div');
+        card.className='product-card fade-in';
+        card.style.animationDelay=`${index*.08}s`;
+        card.dataset.productId=product.id;
+        card.innerHTML=`
+          <div class="product-card-image">
+            <img src="${product.image}" alt="${product.title}" loading="lazy">
+            ${product.badge?`<span class="product-card-badge">${product.badge}</span>`:''}
+            <button class="product-card-quick-view">Quick View</button>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-category">${product.categoryLabel}</div>
+            <h3 class="product-card-title">${product.title}</h3>
+            <div class="product-card-price-row">
+              <span class="product-card-price">₹${product.price}</span>
+              <span class="product-card-original-price">₹${product.originalPrice}</span>
+            </div>
+          </div>
+          <button class="product-card-add-btn" aria-label="Add to cart" data-product-id="${product.id}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>`;
+        productsGrid.appendChild(card);
+      });
+      bindProductCardEvents();
+    }
+
+    function bindProductCardEvents(){
+      $$('.product-card').forEach(card=>{
+        card.addEventListener('click',e=>{
+          if(e.target.closest('.product-card-add-btn'))return;
+          openProductModal(parseInt(card.dataset.productId));
+        });
+      });
+      $$('.product-card-add-btn').forEach(btn=>{
+        btn.addEventListener('click',e=>{
+          e.stopPropagation();
+          addToCart(parseInt(btn.dataset.productId),1);
+        });
+      });
+    }
+
+    // === PRODUCT MODAL ===
+    function openProductModal(id){
+      const product=products.find(p=>p.id===id);
+      if(!product)return;
+      currentModalProduct=product;modalQty=1;
+      modalImg.src=product.image;modalImg.alt=product.title;
+      modalTitle.textContent=product.title;
+      modalCategory.textContent=product.categoryLabel;
+      modalDescription.textContent=product.description;
+      modalPrice.textContent=`₹${product.price}`;
+      qtyValue.textContent=modalQty;
+      modalAddBtn.textContent=`Add to Cart — ₹${product.price*modalQty}`;
+      modalOverlay.classList.add('active');productModal.classList.add('active');
+      document.body.style.overflow='hidden';
+    }
+    function closeProductModal(){
+      modalOverlay.classList.remove('active');productModal.classList.remove('active');
+      document.body.style.overflow='';currentModalProduct=null;
+    }
+    modalClose.addEventListener('click',closeProductModal);
+    modalOverlay.addEventListener('click',closeProductModal);
+    qtyMinus.addEventListener('click',()=>{if(modalQty>1){modalQty--;qtyValue.textContent=modalQty;if(currentModalProduct)modalAddBtn.textContent=`Add to Cart — ₹${currentModalProduct.price*modalQty}`;}});
+    qtyPlus.addEventListener('click',()=>{if(modalQty<10){modalQty++;qtyValue.textContent=modalQty;if(currentModalProduct)modalAddBtn.textContent=`Add to Cart — ₹${currentModalProduct.price*modalQty}`;}});
+    modalAddBtn.addEventListener('click',()=>{if(currentModalProduct){addToCart(currentModalProduct.id,modalQty);closeProductModal();}});
+
+    // === CART ===
+    function addToCart(productId,qty=1){
+      const product=products.find(p=>p.id===productId);
+      if(!product)return;
+      const existing=cart.find(i=>i.id===productId);
+      if(existing)existing.qty+=qty;else cart.push({...product,qty});
+      updateCartUI();showToast(`${product.title} added to cart!`);
+      cartCount.classList.remove('bump');void cartCount.offsetWidth;cartCount.classList.add('bump');
+    }
+    function removeFromCart(productId){cart=cart.filter(i=>i.id!==productId);updateCartUI();}
+    function updateCartUI(){
+      const totalItems=cart.reduce((s,i)=>s+i.qty,0);
+      const totalPrice=cart.reduce((s,i)=>s+(i.price*i.qty),0);
+      cartCount.textContent=totalItems;cartTotalAmount.textContent=`₹${totalPrice}`;
+      if(cart.length===0){
+        cartEmpty.style.display='flex';cartFooter.style.display='none';
+        cartItems.querySelectorAll('.cart-item').forEach(el=>el.remove());
+      }else{
+        cartEmpty.style.display='none';cartFooter.style.display='block';
+        cartItems.querySelectorAll('.cart-item').forEach(el=>el.remove());
+        cart.forEach(item=>{
+          const el=document.createElement('div');el.className='cart-item';
+          el.innerHTML=`<div class="cart-item-image"><img src="${item.image}" alt="${item.title}"></div>
+            <div class="cart-item-details"><div class="cart-item-title">${item.title}</div><div class="cart-item-price">₹${item.price*item.qty}</div><div class="cart-item-qty">Qty: ${item.qty}</div></div>
+            <button class="cart-item-remove" data-product-id="${item.id}" aria-label="Remove item">×</button>`;
+          cartItems.appendChild(el);
+        });
+        cartItems.querySelectorAll('.cart-item-remove').forEach(btn=>{btn.addEventListener('click',()=>removeFromCart(parseInt(btn.dataset.productId)));});
+      }
+    }
+    function openCart(){cartOverlay.classList.add('active');cartDrawer.classList.add('active');document.body.style.overflow='hidden';}
+    function closeCart(){cartOverlay.classList.remove('active');cartDrawer.classList.remove('active');document.body.style.overflow='';}
+    cartBtn.addEventListener('click',openCart);
+    cartCloseBtn.addEventListener('click',closeCart);
+    cartOverlay.addEventListener('click',closeCart);
+    checkoutWhatsappBtn.addEventListener('click',e=>{
+      e.preventDefault();if(cart.length===0)return;
+      let msg="🛒 *New Order from Pixel Lab*\n\n";
+      cart.forEach(i=>{msg+=`• ${i.title} × ${i.qty} = ₹${i.price*i.qty}\n`;});
+      const total=cart.reduce((s,i)=>s+(i.price*i.qty),0);
+      msg+=`\n*Total: ₹${total}*\n\nPlease confirm my order!`;
+      window.open(`https://wa.me/919999999999?text=${encodeURIComponent(msg)}`,'_blank');
+    });
+
+    // === SEARCH ===
+    searchBtn.addEventListener('click',()=>{searchOverlay.classList.add('active');setTimeout(()=>searchInput.focus(),300);});
+    searchClose.addEventListener('click',()=>{searchOverlay.classList.remove('active');searchInput.value='';renderProducts();});
+    searchInput.addEventListener('input',e=>{
+      const q=e.target.value.toLowerCase().trim();
+      if(!q){renderProducts();return;}
+      productsGrid.innerHTML='';
+      const filtered=products.filter(p=>p.title.toLowerCase().includes(q)||p.category.toLowerCase().includes(q)||p.categoryLabel.toLowerCase().includes(q)||p.description.toLowerCase().includes(q));
+      if(filtered.length===0){productsGrid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-muted);"><p style="font-size:18px;margin-bottom:8px;">No posters found for "${e.target.value}"</p><p style="font-size:14px;">Try different keywords</p></div>`;return;}
+      filtered.forEach((product,index)=>{
+        const card=document.createElement('div');card.className='product-card fade-in';card.style.animationDelay=`${index*.08}s`;card.dataset.productId=product.id;
+        card.innerHTML=`<div class="product-card-image"><img src="${product.image}" alt="${product.title}" loading="lazy">${product.badge?`<span class="product-card-badge">${product.badge}</span>`:''}<button class="product-card-quick-view">Quick View</button></div><div class="product-card-info"><div class="product-card-category">${product.categoryLabel}</div><h3 class="product-card-title">${product.title}</h3><div class="product-card-price-row"><span class="product-card-price">₹${product.price}</span><span class="product-card-original-price">₹${product.originalPrice}</span></div></div><button class="product-card-add-btn" aria-label="Add to cart" data-product-id="${product.id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>`;
+        productsGrid.appendChild(card);
+      });
+      bindProductCardEvents();
+    });
+
+    // === FILTERS ===
+    function setActiveFilter(filter){
+      $$('.nav-link').forEach(l=>l.classList.toggle('active',l.dataset.filter===filter));
+      $$('.filter-tab').forEach(t=>t.classList.toggle('active',t.dataset.filter===filter));
+      $$('.mobile-nav-link').forEach(l=>l.classList.toggle('active',l.dataset.filter===filter));
+      renderProducts(filter);
+      const s=$('#products');if(s)s.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    $$('.nav-link[data-filter]').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();setActiveFilter(l.dataset.filter);});});
+    $$('.filter-tab').forEach(t=>{t.addEventListener('click',()=>setActiveFilter(t.dataset.filter));});
+    $$('.mobile-nav-link[data-filter]').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();setActiveFilter(l.dataset.filter);closeMobileMenu();});});
+    $$('.category-card').forEach(c=>{c.addEventListener('click',()=>setActiveFilter(c.dataset.category));});
+    $$('.footer-links-group a[data-filter]').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();setActiveFilter(l.dataset.filter);});});
+
+    // === MOBILE MENU ===
+    function openMobileMenu(){mobileMenuOverlay.classList.add('active');document.body.style.overflow='hidden';}
+    function closeMobileMenu(){mobileMenuOverlay.classList.remove('active');document.body.style.overflow='';}
+    mobileMenuBtn.addEventListener('click',openMobileMenu);
+    mobileCloseBtn.addEventListener('click',closeMobileMenu);
+    mobileMenuOverlay.addEventListener('click',e=>{if(e.target===mobileMenuOverlay)closeMobileMenu();});
+
+    // === TOAST ===
+    let toastTimeout;
+    function showToast(message){toastMessage.textContent=message;toast.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>toast.classList.remove('show'),2500);}
+
+    // === HEADER SCROLL ===
+    window.addEventListener('scroll',()=>{$('#header').classList.toggle('scrolled',window.scrollY>50);});
+
+    // === SCROLL REVEAL ===
+    function initScrollReveal(){
+      const els=$$('.section-header,.category-card,.feature-card,.offers-content');
+      const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+      els.forEach(el=>{el.classList.add('reveal');obs.observe(el);});
+    }
+
+    // === KEYBOARD ===
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){closeProductModal();closeCart();closeMobileMenu();searchOverlay.classList.remove('active');searchInput.value='';}
+      if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();searchOverlay.classList.add('active');setTimeout(()=>searchInput.focus(),300);}
+    });
+
+    // === SMOOTH SCROLL ===
+    $$('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id==='#')return;const t=$(id);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+
+    // === INIT ===
+    document.addEventListener('DOMContentLoaded',()=>{renderProducts();initScrollReveal();});
+  </script>
+</body>
+</html>
