@@ -11,7 +11,7 @@ const products = [
     categoryLabel: "Superheroes",
     price: 300,
     originalPrice: 499,
-    image: "images/posters/batman-brave.jpg",
+    image: "image: "posters/batman-brave.jpg"",
     badge: "Trending",
     description: "A powerful Batman silhouette poster with the bold 'Men Are Brave' typography. Deep red tones create a dramatic, cinematic feel perfect for any superhero fan's wall."
   },
@@ -22,7 +22,7 @@ const products = [
     categoryLabel: "Superheroes",
     price: 300,
     originalPrice: 499,
-    image: "images/posters/spiderman.jpg",
+    image: "image: "posters/spiderman.jpg"",
     badge: "Popular",
     description: "A stunning Spider-Man magazine-style poster featuring Peter Parker in his iconic suit. 'With Great Power Comes Great Responsibility' — a must-have for every Marvel fan."
   },
@@ -33,7 +33,7 @@ const products = [
     categoryLabel: "Cars",
     price: 300,
     originalPrice: 499,
-    image: "images/posters/mustang.jpg",
+    image: image: "posters/mustang.jpg",
     badge: "Hot",
     description: "Celebrate the legendary Ford Mustang with this beautifully illustrated poster. The classic black Mustang on a golden background radiates vintage muscle car energy."
   },
@@ -44,7 +44,7 @@ const products = [
     categoryLabel: "Combo Pack",
     price: 300,
     originalPrice: 549,
-    image: "images/posters/car-poster-kit.jpg",
+    image: "image: "posters/car-poster-kit.jpg"",
     badge: "Best Value",
     description: "The ultimate car lover's room setup! 26 A4-size premium car posters featuring Mustang, Porsche, BMW, Bugatti, Ferrari, and more. Transform your entire wall."
   },
@@ -55,7 +55,7 @@ const products = [
     categoryLabel: "Spiritual",
     price: 300,
     originalPrice: 499,
-    image: "images/posters/radha-krishna.jpg",
+    image: "image: "posters/radha-krishna.jpg"",
     badge: "New",
     description: "A breathtaking artistic rendition of Radha Krishna, showcasing divine love in intricate detail. Delicate floral motifs and celestial colors bring peace and beauty to any space."
   }
